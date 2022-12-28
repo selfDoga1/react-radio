@@ -1,0 +1,30 @@
+{
+  "0": {
+    "id": 0,
+    "name": "Lofi4You",
+    "genre": "Lofi",
+    "url": "https://radio.sutekihost.com:8020/radio.mp3",
+    "favorite": true
+  },
+  "1": {
+    "id": 1,
+    "name": "Cumbia 90s",
+    "genre": "Cumbia",
+    "url": "https://emiteradio.com/proxy/cumbia90s?mp=/stream",
+    "favorite": false
+  },
+  "2": {
+    "id": 2,
+    "name": "Fm Cumbiambera",
+    "genre": "Cumbia",
+    "url": "https://streaming1.locucionar.com/proxy/fmcumbiambera?mp=/stream",
+    "favorite": true
+  },
+  "3": {
+    "id": 3,
+    "name": "Paradise",
+    "genre": "Ecletic",
+    "url": "http://stream-dc1.radioparadise.com/rp_192m.ogg",
+    "favorite": false
+  }
+}

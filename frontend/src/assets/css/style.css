@@ -1,0 +1,22 @@
+.wrapper{
+    position: relative;
+}
+
+.sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    padding: 10px 0;
+}
+
+.nav-brand{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.main{
+    margin-left: 200px;
+    position: fixed;
+    width: 100%;
+}
