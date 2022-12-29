@@ -1,30 +1,51 @@
 {
-  "0": {
-    "id": 0,
-    "name": "Lofi4You",
+  "6f8d511c-9995-4e3c-884f-a6601ebcbeca": {
+    "name": "80s80s",
+    "genre": "80s",
+    "url": "http://streams.80s80s.de/web/mp3-192/streams.80s80s.de/",
+    "favorite": false,
+    "id": "6f8d511c-9995-4e3c-884f-a6601ebcbeca"
+  },
+  "22da4f8e-8748-4c68-82ca-2afcccde70fd": {
+    "name": "lofi4you",
     "genre": "Lofi",
     "url": "https://radio.sutekihost.com:8020/radio.mp3",
-    "favorite": true
+    "favorite": false,
+    "id": "22da4f8e-8748-4c68-82ca-2afcccde70fd"
   },
-  "1": {
-    "id": 1,
+  "05cceb83-ecb8-4328-b497-2e810e6ae25d": {
     "name": "Cumbia 90s",
     "genre": "Cumbia",
     "url": "https://emiteradio.com/proxy/cumbia90s?mp=/stream",
-    "favorite": false
+    "favorite": true,
+    "id": "05cceb83-ecb8-4328-b497-2e810e6ae25d"
   },
-  "2": {
-    "id": 2,
+  "cc11073e-c4cd-424d-8e8d-db550553dfe3": {
     "name": "Fm Cumbiambera",
     "genre": "Cumbia",
     "url": "https://streaming1.locucionar.com/proxy/fmcumbiambera?mp=/stream",
-    "favorite": true
+    "favorite": false,
+    "id": "cc11073e-c4cd-424d-8e8d-db550553dfe3"
   },
-  "3": {
-    "id": 3,
-    "name": "Paradise",
-    "genre": "Ecletic",
-    "url": "http://stream-dc1.radioparadise.com/rp_192m.ogg",
-    "favorite": false
+  "1d43be23-5679-49b9-90bf-122852f34d11": {
+    "name": "Radio Sucumbíos 105.3 FM",
+    "genre": "Cumbia",
+    "url": "http://aler.org:8000/radiosucumbios.mp3",
+    "favorite": false,
+    "id": "1d43be23-5679-49b9-90bf-122852f34d11"
+  },
+  "94a763d2-22c5-4acf-8afb-ad6e333b8080": {
+    "name": "Studio Brussel",
+    "genre": "Alternative",
+    "url": "http://icecast.vrtcdn.be/stubru-high.mp3",
+    "favorite": false,
+    "id": "94a763d2-22c5-4acf-8afb-ad6e333b8080"
+  },
+  "5d9006e0-29f1-46f3-8615-9bb190373f06": {
+    "name": "La Grosse ",
+    "genre": "Reggae",
+    "url": "http://hd.lagrosseradio.info/lagrosseradio-reggae-192.mp3",
+    "favorite": false,
+    "id": "5d9006e0-29f1-46f3-8615-9bb190373f06"
   }
 }

@@ -1,4 +1,6 @@
+
 const radioRouter = (app, path, readFile, writeFile) => {
+    const uuid = require('uuid');
 
     // variables
     const radiosPath = path.resolve(__dirname, '..') + '/data/radios.json'
@@ -13,7 +15,7 @@ const radioRouter = (app, path, readFile, writeFile) => {
                 return;
             } else {
 
-                var filtered_results = {}
+                var filteredResults = {}
                 
                 Object.entries(data).map((value, index) => {
                     
@@ -22,15 +24,15 @@ const radioRouter = (app, path, readFile, writeFile) => {
                     switch(req.params['genre']){
                         case 'Favorites':
                             if(radio.favorite){
-                                filtered_results[radio.id] = radio
+                                filteredResults[radio.id] = radio
                             }
                         default:
                             if(radio.genre == req.params['genre']){
-                                filtered_results[radio.id] = radio
+                                filteredResults[radio.id] = radio
                             }
                     }  
                 })
-                res.send(filtered_results);
+                res.send(filteredResults);
             }
         }, true, radiosPath);
     });
@@ -70,17 +72,32 @@ const radioRouter = (app, path, readFile, writeFile) => {
     app.put('/radio/toggle-favorite/:id', (req, res) =>{
         readFile(data => {
             
-            radio_id = req.params['id'];
+            radioId = req.params['id'];
 
-            selected_radio = data[req.params['id']];
-            selected_radio['favorite'] = !selected_radio.favorite;
-            data[radio_id] = selected_radio;
+            selectedRadio = data[req.params['id']];
+            selectedRadio['favorite'] = !selectedRadio.favorite;
+            data[radioId] = selectedRadio;
             
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send({'radio_favorite': selected_radio.favorite});
+                res.status(200).send({'radio_favorite': selectedRadio.favorite});
             }, radiosPath);
         }, true, radiosPath);
     })
+
+    // ADD
+    app.post('/radio/add/', (req, res) => {
+        readFile(data => {
+           
+            const newRadioId = uuid.v4();
+            req.body['id'] = newRadioId;
+            data[newRadioId] = req.body;
+
+            writeFile(JSON.stringify(data, null, 2), () => {
+                res.status(200).send('new radio added!');
+            }, radiosPath)
+
+        }, true, radiosPath);
+    })  
 };
 
 module.exports = radioRouter;

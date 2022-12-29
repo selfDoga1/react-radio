@@ -8,7 +8,7 @@ import axios from "axios";
 import Configuration from "../assets/json/Configuration.json"
 
 // My Components
-import Content, {RadiosCards} from "./Content";
+import {RadiosCards} from "./Content";
 
 // Material UI
 import {
@@ -109,6 +109,7 @@ function SideBar(props){
         {
             text:'Add Radio',
             icon:<Radio />,
+            onClick: () => props.toggle_modal_open(),
         }, 
     ];
 
@@ -219,7 +220,7 @@ function SideBar(props){
             }}
         >
             <BrandIcon />
-            <SideMenuOptions options={radios_options} title={'RADIOS'}/>
+            <SideMenuOptions options={radios_options} title={'MY RADIOS'}/>
             <SideMenuOptions options={library_options} title={'LIBRARY'}/>
         </Drawer>
     );

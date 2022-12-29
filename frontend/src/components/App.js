@@ -9,6 +9,7 @@ import SideBar from "./SideBar";
 import PlayerScreen from "./PlayerScreen";
 import Content, {RadiosCards} from "./Content";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Modal from "./Modal";
 
 function App(){
   // theme
@@ -55,9 +56,20 @@ function App(){
     />
   );
 
+  // modal
+    const [modal_open, set_modal_open] = useState(false);
+    const toggle_modal_open = () => {set_modal_open(!modal_open)}
+
   return(
     <div>
       <audio ref={ref} style={{marginLeft:'400px'}}></audio>
+
+      <Modal 
+        modal_open={modal_open} 
+        toggle_modal_open={toggle_modal_open}
+        set_current_radios_card={set_current_radios_card}
+        UpdatePlayer={UpdatePlayer} 
+      />
       
       <Grid2 container>
         
@@ -66,18 +78,19 @@ function App(){
             <SideBar 
               set_current_radios_card={set_current_radios_card}
               UpdatePlayer={UpdatePlayer}
+              toggle_modal_open={toggle_modal_open}
             />
           </ThemeProvider>
         </Grid2>
         
-        <Grid2 item xs={12}>
+        <Grid2 item xs={12} sm={12}>
           <PlayerScreen 
             radio_name_screen_text={radio_name_screen_text}
             radio_genre_screen_text={radio_genre_screen_text}
-            />
+          />
         </Grid2>
 
-        <Grid2 item xs={12} marginTop={2}>
+        <Grid2 item xs={12} sm={12} marginTop={2}>
           <Content 
             current_radios_cards={current_radios_cards}
           />
